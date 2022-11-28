@@ -38,9 +38,8 @@
         <div>판매 여부</div>
         <div>
             <div class="form-check">
-                <input type="checkbox" id="open" name="open" class="form-check-input">
-                <input type="hidden" name="_open" value="on"/>
-                <!--스프링 지원 name에 _을 붙여주면 해제를 인식할 수 있음. 그렇지 않으면 미체크시 서버에 아무 값도 전달 안됨.=> 스프링이 체크 박스의 한계 보완.-->>
+                <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input">
+                <!--  타임리프 th:field가 히든 필드까지 자동으로 만들어줌.              -->
                 <label for="open" class="form-check-label">판매 오픈</label>
             </div>
         </div>
